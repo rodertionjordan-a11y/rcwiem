@@ -6,3 +6,4 @@ if word in meme.keys():
     print(meme[word])
 else:
     print('Заскуфился, слоняра')
+print("It's my schoolar project.\n If you will see it, please, don't be angry\nBuy,buy")
