@@ -2,7 +2,7 @@ import telebot
 from g4f.client import Client
 
 # Замени 'TOKEN' на токен твоего бота
-bot = telebot.TeleBot("7557234987:AAEPYBFDmfncr2gEVD4oWF1oTC0Yn0Ymk8A")
+bot = telebot.TeleBot("YOUR_TOKEN")
 
 prompt = []
 history = []
