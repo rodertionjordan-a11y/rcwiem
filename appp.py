@@ -130,3 +130,22 @@ class MemScreen(Screen):
         line.add_widget(Button(text='Cutythbhjdfnm'))
         line.add_widget(Image())
         self.add_widget(line)
+from kivy.uix.screenmanager import Screen
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.image  import Image
+from kivy.uix.textinput import TextInput
+from .screen_button import ScreenButton
+from src.mem_screen import MemScreen
+
+class MenuScreen(Screen):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+
+        line = BoxLayout(orientation="vertical", padding=60, spacing=60)
+        line.add_widget(TextInput(hint_text="yfgbib yjvth rfhns"))
+        line.add_widget(Label(text="Сделай свой мем!"))
+        line.add_widget(ScreenButton("chooser", self, "right", text="Дальше"))
+        line.add_widget(ScreenButton("help",    self, "up",    text="Помощь"))
+
+        self.add_widget(line)
