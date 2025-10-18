@@ -4,7 +4,7 @@ from second_logic import gen_emodji,  get_sport_image_url
 import os
 import asyncio
 
-
+ 
 bot = telebot.TeleBot("8403414525:AAFbOzzVVB-S2gS8m4xdaP_jMjmmoZA5kcY")  # Не забудьте заменить на ваш токен
 
 images = [r'C:\Users\User\Python\t_bot\images\mem.jpeg',
