@@ -13,7 +13,8 @@ class MemoApp(App):
 
         screen_manager.add_widget(MenuScreen(name="menu"))
         screen_manager.add_widget(HelpScreen(name="help"))
-        screen_manager.add_widget(ChooserScreen(name="screen"))
+        screen_manager.add_widget(ChooserScreen(name="chooser"))
+        screen_manager.add_widget(MemScreen(name="generator"))
         return screen_manager
 
 
@@ -106,7 +107,7 @@ class MemScreen(Screen):
     def gaymem(self, _):
         if not MemScreen.image.source:
             return
-        pil_image = PIL.Image.open(MemScreen.image.source)
+        pil_image = PILImage.open(MemScreen.image.source)
         pil_image = pil_image.convert("RGB")
 
         draw = ImageDraw.Draw(pil_image)
@@ -128,7 +129,7 @@ class MemScreen(Screen):
             text_width = box1[2]-box1[0]
             text_height = box[3]-box[1]
             x = (width - text_width)/2
-            y = 
+            y = height - text_height - 10
             draw.text((x,y), bottom, font=font, fill = 'black')
         path = os.path.join(os.getcmd(), "autodraw_21.10.2025_(2).png")
         pil_image.save(path)
